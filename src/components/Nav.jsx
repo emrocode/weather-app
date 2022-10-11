@@ -1,4 +1,4 @@
-export default function Navigation(props) {
+export default function Navigation({ city, setCity, searchLocation }) {
   return (
     <header className="sticky top-0 bg-[#EB6E4B] shadow-sm">
       <div className="bg-neutral-800">
@@ -15,22 +15,21 @@ export default function Navigation(props) {
       </div>
       <nav className="mx-auto flex h-20 w-[90%] max-w-[1440px] items-center">
         <form
-          onSubmit={(e) => e.preventDefault()}
+          onSubmit={searchLocation}
           className="flex w-full max-w-[360px] overflow-hidden rounded-full shadow-sm"
         >
           <input
             type="text"
-            value={props.location}
-            autoFocus
-            onChange={(e) => props.setLocation(e.target.value)}
+            value={city}
+            autoFocus={true}
+            onChange={(e) => setCity(e.target.value)}
             placeholder="Search City"
             className="w-full py-2 px-4 text-neutral-800 outline-none"
           />
           <button
             type="submit"
             title="Search"
-            onClick={props.searchLocation}
-            className="bg-white py-2 px-4 outline-none"
+            className="border-l border-gray-200 bg-white py-2 px-4 outline-none"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
