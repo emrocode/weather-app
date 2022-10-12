@@ -8,6 +8,7 @@ export default function App() {
   const [data, setData] = useState([]);
   const [city, setCity] = useState("");
 
+  // set units "imperial" returns °F and "metric" returns °C
   const URL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&appid=${APPID}`;
 
   const searchLocation = async (e) => {
@@ -22,8 +23,9 @@ export default function App() {
 
   useEffect(() => {
     (async function defaultLocation() {
+      const city = "Asuncion,py";
       await fetch(
-        `https://api.openweathermap.org/data/2.5/weather?q=Asuncion,py&units=imperial&appid=${APPID}`
+        `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&appid=${APPID}`
       )
         .then((res) => res.json())
         .then((json) => setData(json));

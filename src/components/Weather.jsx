@@ -36,12 +36,12 @@ export default function Weather({ data }) {
             )}°F. ${data.weather[0].main}. ${
               data.weather[0].description
             }`}</span>
-            <ul className="flex flex-col justify-between sm:flex-row">
+            <ul className="flex justify-between">
               <li>{`Humidity: ${data.main.humidity}%`}</li>
               <li>{`Visibility: ${data.visibility / 1000}km`}</li>
             </ul>
-            <ul className="flex flex-col justify-between sm:flex-row">
-              <li>{`Wind Speed: ${Math.round(data.wind.speed)}mph`}</li>
+            <ul className="flex justify-between">
+              <li>{`Wind: ${Math.round(data.wind.speed)}mph`}</li>
               <li>{`Pressure: ${Math.round(data.main.pressure)}hPa`}</li>
             </ul>
           </section>
