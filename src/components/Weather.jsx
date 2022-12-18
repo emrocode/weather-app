@@ -16,7 +16,7 @@ export default function Weather({ data }) {
           <section className="flex flex-col-reverse justify-start gap-2 sm:grid-cols-2 sm:flex-row sm:justify-between">
             <div className="flex items-center gap-x-2">
               <img
-                src={`http://openweathermap.org/img/wn/${wIcon}@2x.png`}
+                src={`https://openweathermap.org/img/wn/${wIcon}@2x.png`}
                 className="h-16 w-16"
                 alt={`Weather Today in ${data.name}`}
               />

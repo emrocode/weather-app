@@ -2,14 +2,14 @@ export default function Navigation({ city, setCity, searchLocation }) {
   return (
     <header className="sticky top-0 bg-[#EB6E4B] shadow-sm">
       <div className="bg-neutral-800">
-        <div className="mx-auto flex h-10 w-[90%] max-w-[1440px] justify-end">
+        <div className="mx-auto flex h-12 w-[90%] max-w-[1440px] items-center justify-end">
           <a
-            className="flex items-center gap-x-2 text-sm capitalize text-white outline-none"
+            className="rounded-full bg-neutral-700 px-4 py-2 text-sm capitalize text-white outline-none"
             href="https://openweathermap.org/api"
             target="_blank"
             rel="noopener noreferrer"
           >
-            open weather map <span>&rarr;</span>
+            open weather map
           </a>
         </div>
       </div>
